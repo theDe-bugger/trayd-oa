@@ -1,6 +1,6 @@
 # Job Management API
 
-A RESTful API built with Flask for managing construction jobs and workers. This API provides comprehensive job and worker management capabilities with advanced querying, relationships, and performance features.
+A RESTful API built with Flask for managing construction jobs and workers. This API provides comprehensive job and worker management capabilities with advanced querying, relationships, and performance features. This was made by Jaimil for Trayd. It is also deployed on PythonAnywhere as a production server on the following URL: `https://thedebugger46.pythonanywhere.com`.
 
 ## Setup Instructions
 
@@ -31,6 +31,18 @@ python app.py
 ```
 
 The server will start on `http://localhost:5000`
+
+## Running Tests
+
+I set up some test cases to track a few features of the API. You can run them with the following instructions:
+
+1. Make sure the API server is running in a separate terminal
+2. You can also run the tests on the deployed server by changing the BASE_URL in test_api.py to PROD_URL instead of LOCAL_URL
+3. Run the tests with:
+
+```bash
+pytest test_api.py
+```
 
 ## API Documentation
 
@@ -293,25 +305,3 @@ curl -X POST http://localhost:5000/workers \
 ```bash
 curl http://localhost:5000/stats
 ```
-
-## Running Tests
-
-1. Make sure the API server is running in a separate terminal
-2. Run the tests with:
-
-```bash
-pytest test_api.py
-```
-
-## Future Improvements
-
-Potential enhancements could include:
-
-- Authentication and authorization
-- Job and worker status validation rules
-- Real-time updates via WebSocket
-- File attachments for jobs
-- Worker availability tracking
-- Advanced reporting features
-- API rate limiting
-- Caching for frequently accessed data

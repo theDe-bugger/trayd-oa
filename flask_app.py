@@ -30,15 +30,6 @@ class Worker(db.Model):
 with app.app_context():
     db.create_all()
 
-# Error Handlers
-@app.errorhandler(500)
-def internal_error(error):
-    return jsonify({'error': 'Internal server error'}), 500
-
-@app.errorhandler(404)
-def not_found_error(error):
-    return jsonify({'error': 'Resource not found'}), 404
-
 # Helper Functions
 def parse_date(date_str, error_message):
     try:

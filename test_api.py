@@ -3,9 +3,11 @@ import json
 import requests
 from datetime import datetime, timedelta
 
+PROD_URL = 'https://thedebugger46.pythonanywhere.com'
+LOCAL_URL = 'http://127.0.0.1:5000'
 
 class TestJobManagementAPI(unittest.TestCase):
-    BASE_URL = 'http://127.0.0.1:5000'
+    BASE_URL = PROD_URL # CHANGE TO BASE_URL TO TEST LOCAL CODE
     
     def setUp(self):
         # Clear any existing data (if you have a cleanup endpoint)
